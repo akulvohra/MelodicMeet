@@ -1,0 +1,44 @@
+body {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,54,26,1) 70%);
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 90px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(96, 178, 104);
+}
+
+div {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    border:none;
+    border-radius: 14px;
+    color:rgb(230, 233, 229);
+    font-size: 22px;
+}
+
+form {
+    text-align: center;
+}
+
+h2 {
+    
+}

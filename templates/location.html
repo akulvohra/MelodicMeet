@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage2.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Please enter your zip code:</h2>
+        {% if error == 't' %}
+            <p> Invalid zipcode entered</p>
+        {% else %}
+        {% endif %}
+         <form action="/processing">
+             <input id='ip1' type='text' name='zipcode'><br>
+             <input id='ip2' type='submit' value='Continue'>
+        </form>
+</body>
+</html>

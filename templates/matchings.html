@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage3.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    {% if not user %}
+    <h1>You're about to meet your Melodic Match</h1>
+    <form action="/newmatches">
+        <input id="ip2" type='submit' value="I'm Ready">
+    </form>
+    {% else %}
+    {% endif %}
+    {% if user %}
+    <p>{{user}} (You) + {{match}} are a {{close}}% match
+    
+    <br>
+    Start the conversation: <a href="mailto:{{email}}">{{email}}</a></p>
+    <p>
+    {{ match }} is {{ miles }} miles away.
+    </p>
+        {% if common%}
+        <h6>
+            Artists that you and {{match}} both love:
+        </h6>
+        <ol>
+        {%for v in common%}
+            <li>{{v | replace("'","") | replace ("[", "") | replace ("]", "")}}</li>
+        {%endfor%}
+        </ol>
+        {% else %}
+        {% endif %}
+    {% else %}
+    {% endif %}
+</body>
+</html>
